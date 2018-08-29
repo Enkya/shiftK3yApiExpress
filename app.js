@@ -1,6 +1,14 @@
 const express = require('express');
+const logger = require('morgan');
+const bodyParser = require('body-parser');
+
 const app = express();
 
-app.get('/', (req, res) => res.send('Hello World!'));
+app.use(logger('dev'));
 
-app.listen(3000, () => console.log('Example app listening on port 3000!'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: false}));
+
+app.get('/', (req, res) => res.status(200).send('Hello World!'));
+
+module.exports = app;
