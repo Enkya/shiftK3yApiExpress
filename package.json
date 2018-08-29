@@ -1,0 +1,27 @@
+{
+  "name": "shiftk3yapiexpress",
+  "version": "0.0.1",
+  "description": "an express implementation of the shiftk3y flask api",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Enkya/shiftK3yApiExpress.git"
+  },
+  "keywords": [
+    "express",
+    "api",
+    "shiftk3y"
+  ],
+  "author": "Bruce Bigirwenkya (brucebigirwenkya@gmail.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Enkya/shiftK3yApiExpress/issues"
+  },
+  "homepage": "https://github.com/Enkya/shiftK3yApiExpress#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
