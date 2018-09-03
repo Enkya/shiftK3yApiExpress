@@ -1,8 +1,12 @@
+require('./server/config/config');
+
 const express = require('express');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
 
 const app = express();
+
+// const routes = require('./routes/index');
 
 app.use(logger('dev'));
 

@@ -3,7 +3,7 @@ const employee = require('../models').employee;
 module.exports = {
     create(req, res) {
         return employee
-            .create({name: 'Bruce Bigirwenkya'})
+            .create({name: req.body.name})
             .then(employee => 
                 res.status(200).send(employee)
             )
