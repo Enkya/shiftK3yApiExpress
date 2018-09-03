@@ -8,5 +8,8 @@ module.exports = {
                 res.status(200).send(employee)
             )
             .catch(error => res.status(400).send(error));
-    }
+    },
+    fetch(req, res) {
+        return res.status(200).send({'dummy': 'dummy'});
+    },
 }
