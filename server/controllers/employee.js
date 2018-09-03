@@ -1,15 +1,18 @@
-const employee = require('../models').employee;
+const Employee = require('../models').Employee;
 
 module.exports = {
     create(req, res) {
-        return employee
+        return Employee
             .create({name: req.body.name})
             .then(employee => 
                 res.status(200).send(employee)
             )
             .catch(error => res.status(400).send(error));
     },
-    fetch(req, res) {
-        return res.status(200).send({'dummy': 'dummy'});
+    list(req, res) {
+        return Employee
+            .all()
+            .then(employees => res.status(200).send(employees))
+            .catch(error => res.status(400).send(error));
     },
 }
