@@ -24,8 +24,10 @@
   "homepage": "https://github.com/Enkya/shiftK3yApiExpress#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
+    "cookie-session": "^2.0.0-beta.3",
     "express": "^4.16.3",
     "morgan": "^1.9.0",
+    "multer": "^1.3.1",
     "pg": "^7.4.3",
     "pg-hstore": "^2.3.2",
     "sequelize": "^4.38.0"

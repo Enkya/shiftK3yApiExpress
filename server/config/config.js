@@ -1,1 +1,7 @@
-module.exports = require('./' + (process.env.NODE_ENV || 'development') + '.json');
+let ENV = require('./' + (process.env.NODE_ENV || 'development') + '.json');
+
+const gcpConfig = require('./extraConfig.js');
+
+ENV = {...ENV, ...gcpConfig};
+
+module.exports = ENV;
