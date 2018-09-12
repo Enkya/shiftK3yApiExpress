@@ -28,7 +28,7 @@ const callback = (iss, sub, profile, accessToken, refreshToken, done) => {
   
   const users = {};
   passport.serializeUser((user, done) => {
-    const id = uuid.v4();
+    const id = uuid.v5();
     users[id] = user;
     done(null, id);
   });

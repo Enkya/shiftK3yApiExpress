@@ -1,17 +1,16 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   const Employee = sequelize.define('Employee', {
-    name: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
     active: {
       type: DataTypes.BOOLEAN,
       defaultValue: true,
-    }
+    },
   }, {});
   Employee.associate = function(models) {
-    // associations can be defined here
+    Employee.hasOne(models.contact, {
+      foreignKey: 'id',
+      as: 'contact',
+    })
   };
   return Employee;
 };

@@ -5,3 +5,9 @@
  * numbers
  * postal
  */
+
+ /**
+  * @param {UUID} id
+  * @param {UUID} companyId
+  * 
+  */
