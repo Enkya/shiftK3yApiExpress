@@ -19,7 +19,14 @@ module.exports = (sequelize, DataTypes) => {
 
   }, {});
   Contact.associate = function(models) {
-    // associations can be defined here
+    Contact.belongsTo(models.Person, {
+      onDelete: 'CASCADE',
+      foreignKey: 'id',
+    });
+    Contact.belongsTo(models.Employee, {
+      onDelete: 'CASCADE',
+      foreignKey: 'id',
+    });
   };
   return Contact;
 };

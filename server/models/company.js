@@ -28,19 +28,19 @@ module.exports = (sequelize, DataTypes) => {
     Company.hasMany(models.Address, {
       foreignKey: 'id',
       as: 'address',
-    })
-    Company.hasMany(models.Attachments, {
+    });
+    Company.hasMany(models.Attachment, {
       foreignKey: 'id',
       as: 'attachments',
-    })
+    });
     Company.hasOne(models.Person, {
       foreignKey: 'id',
       as: 'legal_contact_person',
-    })
+    });
     Company.hasOne(models.Person, {
       foreignKey: 'id',
       as: 'technical_contact_person',
-    })
+    });
   };
 
   return Company;

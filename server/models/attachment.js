@@ -7,7 +7,10 @@ module.exports = (sequelize, DataTypes) => {
     },
   }, {});
   Attachment.associate = function(models) {
-    // associations can be defined here
+    Attachment.belongsTo(models.Company, {
+      onDelete: 'CASCADE',
+      foreignKey: 'id',
+    });
   };
   return Attachment;
 };

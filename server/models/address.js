@@ -8,7 +8,10 @@ module.exports = (sequelize, DataTypes) => {
     country: DataTypes.STRING,
   }, {});
   Address.associate = function(models) {
-    // associations can be defined here
+    Address.belongsTo(models.Company, {
+      onDelete: 'CASCADE',
+      foreignKey: 'id',
+    });
   };
   return Address;
 };

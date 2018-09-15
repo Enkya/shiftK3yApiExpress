@@ -19,9 +19,13 @@ module.exports = (sequelize, DataTypes) => {
     },
   }, {});
   Person.associate = function(models) {
-    Person.hasMany(models.contact, {
+    Person.hasMany(models.Contact, {
       foreignKey: 'id',
       as: 'contact',
+    });
+    Person.belongsTo(models.Company, {
+      onDelete: 'CASCADE',
+      foreignKey: 'id',
     })
   };
   return Person;

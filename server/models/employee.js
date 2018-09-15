@@ -7,7 +7,7 @@ module.exports = (sequelize, DataTypes) => {
     },
   }, {});
   Employee.associate = function(models) {
-    Employee.hasOne(models.contact, {
+    Employee.hasOne(models.Contact, {
       foreignKey: 'id',
       as: 'contact',
     })
