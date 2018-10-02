@@ -10,7 +10,7 @@ module.exports = {
     },
     MICROSOFT_URL: process.env.MICROSOFT_URL || 'https://graph.microsoft.com/beta/me',
     creds: {
-        redirectUrl: process.env.REDIRECT_URL || 'http://localhost:3000/token',
+        redirectUrl: process.env.OFFICE_RETURN_URL || 'http://localhost:3000/auth/openid/return',
         clientID: process.env.OFFICE_CLIENT_ID,
         clientSecret: process.env.OFFICE_CLIENT_SECRET,
         identityMetadata: process.env.IDENTITY_METADATA,

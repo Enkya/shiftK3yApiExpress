@@ -6,7 +6,7 @@ const express = require('express');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
 let multer = require('multer');
-let session = require('cookie-session');
+let session = require('express-session');
 const passport = require('passport');
 const OIDCStrategy = require('passport-azure-ad').OIDCStrategy;
 const uuid = require('uuid');
@@ -43,7 +43,11 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
 app.use(multer({inMemory: true, dest:'./uploads/'}).any());
-app.use(session({signed: true, secret:config.cookieSecret}));
+app.use(session({
+  signed: true,
+  secret:config.cookieSecret,
+  saveUninitialized: false,
+}));
 
 app.use ('/', routes);
 
