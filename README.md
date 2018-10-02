@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/Enkya/shiftK3yApiExpress.svg?style=svg)](https://circleci.com/gh/Enkya/shiftK3yApiExpress)
+
 # ShiftK3y Express APi
 This is an express js implementation for the ShiftK3y API.
 It allows for the creation of employees, departments and then adding clientele information. It also allows for the creation of different resources to be used in tracking license compliance
