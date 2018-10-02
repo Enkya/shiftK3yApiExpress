@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const authController = require('../controllers').auth;
 
-router.get('/login', authController.login);
+router.get('/openid', authController.login);
 
 router.get('/openid/return', authController.login);
 
